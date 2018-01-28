@@ -12,8 +12,12 @@ public class Customer {
         transactions.add(500.00);
     }
 
-    public String getName() {
+    private String getName() {
         return name;
+    }
+
+    public void showName() {
+        System.out.println(this.getName());
     }
 
     public void transaction(double creditDebit) {

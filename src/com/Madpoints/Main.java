@@ -7,12 +7,13 @@ public class Main {
         bank.addBranch(new Branch("Bedford Falls, US"));
         Branch bedford = bank.getBranches().get(0);
         bedford.addCustomer(new Customer("Fred"));
+        bedford.addCustomer(new Customer("Sally"));
         Customer fred = bedford.getCustomers().get(0);
 
-        System.out.println(bank.getName());
-        System.out.println(bedford.getName());
-        System.out.println(fred.getName());
+        bank.showName();
+        bedford.showName();
         fred.transaction(-200);
+        bedford.showCustomers();
 
     }
 }

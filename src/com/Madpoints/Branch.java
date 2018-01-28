@@ -16,8 +16,19 @@ public class Branch {
         return true;
     }
 
-    public String getName() {
+    private String getName() {
         return name;
+    }
+
+    public void showName() {
+        System.out.println(this.getName());
+    }
+
+    public void showCustomers() {
+        for (int i = 0; i < this.getCustomers().size(); i++) {
+            this.getCustomers().get(i).showName();
+            this.getCustomers().get(i).showTransactions();
+        }
     }
 
     public ArrayList<Customer> getCustomers() {

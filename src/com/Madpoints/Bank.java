@@ -16,8 +16,12 @@ public class Bank {
         return true;
     }
 
-    public String getName() {
+    private String getName() {
         return name;
+    }
+
+    public void showName() {
+        System.out.println(this.getName());
     }
 
     public ArrayList<Branch> getBranches() {
