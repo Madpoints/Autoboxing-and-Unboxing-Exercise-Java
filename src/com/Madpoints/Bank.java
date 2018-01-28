@@ -10,4 +10,17 @@ public class Bank {
         this.name = name;
         this.branches = new ArrayList<Branch>();
     }
+
+    public boolean addBranch(Branch branch) {
+        branches.add(branch);
+        return true;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public ArrayList<Branch> getBranches() {
+        return branches;
+    }
 }

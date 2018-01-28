@@ -8,6 +8,21 @@ public class Customer {
 
     public Customer(String name) {
         this.name = name;
-        this.transactions.add(Double.valueOf(500.00));
+        this.transactions = new ArrayList<>();
+        transactions.add(500.00);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void transaction(double creditDebit) {
+        transactions.add(creditDebit);
+    }
+
+    public void showTransactions() {
+        for (int i = 0; i < transactions.size(); i++) {
+            System.out.println(transactions.get(i));
+        }
     }
 }
